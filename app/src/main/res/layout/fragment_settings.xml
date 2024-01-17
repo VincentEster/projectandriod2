@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#66BBE8"
+    android:background="#D9D9D9"
     tools:context=".Settings">
 
     <!-- TODO: Update blank fragment layout -->
@@ -14,6 +14,7 @@
         android:id="@+id/switch1"
         android:layout_width="216dp"
         android:layout_height="84dp"
+        android:layout_marginStart="4dp"
         android:text="Fahrenheit"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
