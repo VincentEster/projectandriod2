@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#66bbe8"
-    android:outlineAmbientShadowColor="#66BBE8"
+    android:outlineAmbientShadowColor="#66BBEB"
     android:outlineSpotShadowColor="#66BBE8"
     android:visibility="visible"
     tools:context=".landing">
@@ -72,8 +72,8 @@
 
     <Button
         android:id="@+id/btn_radar"
-        android:layout_width="61dp"
-        android:layout_height="50dp"
+        android:layout_width="67dp"
+        android:layout_height="49dp"
         android:backgroundTint="#2727D1"
         app:cornerRadius="1500dp"
         app:icon="@android:drawable/ic_dialog_map"
@@ -85,26 +85,37 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <TableLayout
-        android:layout_width="354dp"
-        android:layout_height="96dp"
+        android:layout_width="226dp"
+        android:layout_height="117dp"
         android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/temp_en_plaats"
-        app:layout_constraintVertical_bias="0.359">
+        app:layout_constraintVertical_bias="0.422">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="324dp">
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/weathertable_ma"
                 android:layout_width="31dp"
                 android:layout_height="match_parent"
                 android:text="ma" />
 
+            <TextView
+                android:id="@+id/weathertable_1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1/4" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
         </TableRow>
 
         <TableRow
@@ -112,10 +123,23 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/weathertable_di"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="di" />
+
+            <TextView
+                android:id="@+id/weathertable_2_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2/6" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
         </TableRow>
 
         <TableRow
@@ -123,10 +147,22 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/weathertable_wo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="wo" />
+
+            <TextView
+                android:id="@+id/weathertable_0_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/3" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </TableRow>
 
         <TableRow
@@ -134,10 +170,22 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/weathertable_do"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="do" />
+
+            <TextView
+                android:id="@+id/waethertable_2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2/4" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
         </TableRow>
 
         <TableRow
@@ -145,10 +193,22 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/weathertable_vrij"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="vrij" />
+
+            <TextView
+                android:id="@+id/weathertable_3_6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="3/6" />
+
+            <TextView
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="vrij" />
+                android:text="TextView" />
         </TableRow>
 
     </TableLayout>
