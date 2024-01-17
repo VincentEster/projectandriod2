@@ -14,7 +14,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/temp_en_plaats"
         android:layout_width="116dp"
         android:layout_height="94dp"
         android:text="    8°C  Emmen"
@@ -48,7 +48,7 @@
         android:layout_width="133dp"
         android:layout_height="108dp"
         android:src="@drawable/cloud_icon_17"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/temp_en_plaats"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.607"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,8 +72,8 @@
 
     <Button
         android:id="@+id/btn_radar"
-        android:layout_width="54dp"
-        android:layout_height="44dp"
+        android:layout_width="61dp"
+        android:layout_height="50dp"
         android:backgroundTint="#2727D1"
         app:cornerRadius="1500dp"
         app:icon="@android:drawable/ic_dialog_map"
@@ -85,15 +85,15 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <TableLayout
-        android:layout_width="363dp"
-        android:layout_height="343dp"
+        android:layout_width="354dp"
+        android:layout_height="96dp"
         android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.331">
+        app:layout_constraintTop_toBottomOf="@+id/temp_en_plaats"
+        app:layout_constraintVertical_bias="0.359">
 
         <TableRow
             android:layout_width="match_parent"
@@ -101,15 +101,21 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_width="31dp"
+                android:layout_height="match_parent"
+                android:text="ma" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="di" />
         </TableRow>
 
         <TableRow
@@ -120,16 +126,30 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="wo" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="do" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vrij" />
+        </TableRow>
 
     </TableLayout>
 
