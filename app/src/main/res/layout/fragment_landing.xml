@@ -44,16 +44,16 @@
         app:layout_constraintVertical_bias="0.335" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/weersvoorspelling_lucht"
         android:layout_width="133dp"
         android:layout_height="108dp"
         android:src="@drawable/cloud_icon_17"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.665"
+        app:layout_constraintHorizontal_bias="0.679"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <Button
         android:id="@+id/btn_settings"
