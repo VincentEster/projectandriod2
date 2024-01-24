@@ -9,7 +9,11 @@
         android:id="@+id/landing"
         android:name="com.example.mainproject.landing"
         android:label="fragment_landing"
-        tools:layout="@layout/fragment_landing" />
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landing_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
     <fragment
         android:id="@+id/settings"
         android:name="com.example.mainproject.Settings"
