@@ -19,4 +19,9 @@
         android:name="com.example.mainproject.Settings"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/weathermap"
+        android:name="com.example.mainproject.weathermap"
+        android:label="fragment_weathermap"
+        tools:layout="@layout/fragment_weathermap" />
 </navigation>
