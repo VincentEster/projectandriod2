@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
@@ -42,10 +43,12 @@ class landing : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_landing_to_settings)
         }
 
+            view.findViewById<TextView>(R.id.weathertable_1_4).setOnClickListener {
+
+        }
+
         return view
     }
-
-
 
 
 
