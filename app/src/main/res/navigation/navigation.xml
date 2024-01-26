@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_landing_to_settings"
             app:destination="@id/settings" />
+        <action
+            android:id="@+id/action_landing_to_weathermap"
+            app:destination="@id/weathermap" />
     </fragment>
     <fragment
         android:id="@+id/settings"
