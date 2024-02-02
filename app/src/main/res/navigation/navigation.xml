@@ -26,5 +26,9 @@
         android:id="@+id/weathermap"
         android:name="com.example.mainproject.weathermap"
         android:label="fragment_weathermap"
-        tools:layout="@layout/fragment_weathermap" />
+        tools:layout="@layout/fragment_weathermap" >
+        <action
+            android:id="@+id/action_weathermap_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
 </navigation>
