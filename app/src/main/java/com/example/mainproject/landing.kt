@@ -43,10 +43,14 @@ class landing : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_landing_to_settings)
         }
 
-            view.findViewById<TextView>(R.id.weathertable_1_4).setOnClickListener {
+            view.findViewById<Button>(R.id.btn_reset).setOnClickListener {
+                view.findViewById<TextView>(R.id.weathertable_1_4).text = "JEMOEDER"
 
         }
 
+        view.findViewById<Button>(R.id.btn_radar) .setOnClickListener {
+            Navigation.findNavController(view) .navigate(R.id.action_landing_to_weathermap)
+        }
         return view
     }
 
