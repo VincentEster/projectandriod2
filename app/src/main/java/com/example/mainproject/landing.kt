@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.Navigation
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,12 +47,34 @@ class landing : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_landing_to_settings)
         }
 
-            view.findViewById<TextView>(R.id.weathertable_1_4).setOnClickListener {
+
+        view.findViewById<Button>(R.id.btn_reset).setOnClickListener {
+            val queue = Volley.newRequestQueue(this)
+            val url = "https://api.weatherapi.com/v1/current.json?key=bbe966c41757410fa8e132758242802&q=Emmen&aqi=yes"
+
+// Request a string response from the provided URL.
+            val stringRequest = StringRequest(
+                Request.Method.GET, url,
+                Response.Listener<String> { response ->
+                    // Display the first 500 characters of the response string.
+
+
+
+                },
+                Response.ErrorListener {  })
+
+// Add the request to the RequestQueue.
+            queue.add(stringRequest)
 
         }
 
+
+
+
         return view
     }
+
+
 
 
 
