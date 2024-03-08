@@ -49,7 +49,7 @@ class landing : Fragment() {
 
 
         view.findViewById<Button>(R.id.btn_reset).setOnClickListener {
-            val queue = Volley.newRequestQueue(this)
+            val queue = Volley.newRequestQueue(this.context)
             val url = "https://api.weatherapi.com/v1/current.json?key=bbe966c41757410fa8e132758242802&q=Emmen&aqi=yes"
 
 // Request a string response from the provided URL.
