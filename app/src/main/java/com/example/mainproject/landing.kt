@@ -77,9 +77,9 @@ class landing : Fragment() {
 
                     val gson= Gson()
                     weer = gson.fromJson(response, Root::class.java)
-                    view.findViewById<TextView>(R.id.temp_en_plaats).text = weer.current.temp_c.toString() + "C" + weer.location.name
-
-
+                    view.findViewById<TextView>(R.id.temp_en_plaats).text = weer.current.temp_c.toString() + "°C" + " " + weer.location.name
+                    view.findViewById<TextView>(R.id.weathertable_wind_row2).text = weer.current.wind_dir.toString()
+                    view.findViewById<TextView>(R.id.weathertable_rain_row2).text = weer.current.humidity.toString() + "%"weathertable_2_6
 //                    view.findViewById<ImageView>(R.id.weersvoorspelling_lucht).setImageBitmap(getImageBitmap(weer.current.condition.icon))
 //                    Log.println(Log.INFO,"icon", weer.current.condition.icon.toUri().toIcon().toString())
 
@@ -91,7 +91,7 @@ class landing : Fragment() {
 // Add the request to the RequestQueue.
             queue.add(stringRequest)
 
-        }
+       }
 
 
 
