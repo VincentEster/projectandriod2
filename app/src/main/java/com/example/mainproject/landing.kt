@@ -1,18 +1,32 @@
 package com.example.mainproject
 
+import android.content.ContentValues.TAG
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.graphics.drawable.toIcon
+import androidx.core.net.toUri
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
+import java.io.BufferedInputStream
+import java.io.IOException
+import java.io.InputStream
+import java.net.URI
+import java.net.URL
+import java.net.URLConnection
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -66,6 +80,11 @@ class landing : Fragment() {
                     view.findViewById<TextView>(R.id.temp_en_plaats).text = weer.current.temp_c.toString() + "C" + weer.location.name
 
 
+//                    view.findViewById<ImageView>(R.id.weersvoorspelling_lucht).setImageBitmap(getImageBitmap(weer.current.condition.icon))
+//                    Log.println(Log.INFO,"icon", weer.current.condition.icon.toUri().toIcon().toString())
+
+
+
                 },
                 Response.ErrorListener {  })
 
@@ -80,11 +99,22 @@ class landing : Fragment() {
         return view
     }
 
-
-
-
-
-
+    private fun getImageBitmap(url: String): Bitmap? {
+        var bm: Bitmap? = null
+        try {
+            val aURL = URL( "https:" + url)
+            val conn: URLConnection = aURL.openConnection()
+            conn.connect()
+            val `is`: InputStream = conn.getInputStream()
+            val bis = BufferedInputStream(`is`)
+            bm = BitmapFactory.decodeStream(bis)
+            bis.close()
+            `is`.close()
+        } catch (e: IOException) {
+            Log.e(TAG, "Error getting bitmap", e)
+        }
+        return bm
+    }
 
 
 }
