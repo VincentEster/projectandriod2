@@ -12,6 +12,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,11 +29,13 @@ class landing : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var weer:Root
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+
         }
     }
 
@@ -58,6 +61,9 @@ class landing : Fragment() {
                 Response.Listener<String> { response ->
                     // Display the first 500 characters of the response string.
 
+                    val gson= Gson()
+                    weer = gson.fromJson(response, Root::class.java)
+                    view.findViewById<TextView>(R.id.temp_en_plaats).text = weer.current.temp_c.toString() + "C" + weer.location.name
 
 
                 },
